@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "713049440410",
+    "project_id": "childhealthcareproject",
+    "storage_bucket": "childhealthcareproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713049440410:android:f3519c5cf9986179f4df23",
+        "android_client_info": {
+          "package_name": "com.example.childhealthcareproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKqWHkEzSotpiThazMs01N3y18de5tT3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

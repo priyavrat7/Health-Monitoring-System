@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/rounded_corner">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/baby_name_text_view"
+        android:text="Baby Name"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/birthday_text_view"
+        android:text="Date of Birth"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginVertical="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_num_text_view"
+        android:text="Parent's contact number"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginVertical="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_address_text_view"
+        android:text="Email Address"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        android:layout_marginVertical="2dp"/>
+
+</LinearLayout>

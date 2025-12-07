@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="user_types">
+        <item>Select User Type</item>
+        <item>Doctor</item>
+        <item>Parent</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Select Baby Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="time_units">
+        <item>Select Time Unit</item>
+        <item>seconds</item>
+        <item>minutes</item>
+        <item>hours</item>
+        <item>days</item>
+    </string-array>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="32dp"
+    tools:context=".DoctorActivity">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/baby_icon"
+        android:src="@drawable/baby_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_alignBottom="@id/baby_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/dark_grey"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/search"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search baby by any or all the following options:"
+            android:textSize="16sp"
+            android:textColor="@color/dark_grey"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/buttons"
+        android:layout_below="@id/search"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="7dp"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/phone_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="7dp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/first_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Baby's first name"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="7dp"
+            android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/last_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Baby's last name"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="7dp"
+            android:layout_marginTop="8dp"/>
+        <Button
+            android:id="@+id/searchProfileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Baby's Profile" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/buttons">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/doctor_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/searchProfileButton" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

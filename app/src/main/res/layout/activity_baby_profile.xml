@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="32dp"
+    tools:context=".BabyProfile">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/baby_icon"
+        android:src="@drawable/baby_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_alignBottom="@id/baby_icon"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baby's Profile"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/dark_grey"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_above="@id/button_layout">
+        <!-- Main LinearLayout -->
+        <LinearLayout
+            android:id="@+id/information_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/title">
+
+            <!-- Editable Text: Baby's First Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/babyFirstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Editable Text: Baby's Last Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/babyLastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Baby's Date of Birth -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Birthdate:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/dateOfBirthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DD/MM/YY"
+                    android:inputType="date"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Dropdown Menu: Baby's Gender -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:  "
+                    android:textSize="18sp"/>
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/genders"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Editable Text: Baby's Height -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/heightEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Baby's Weight -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/weightEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Mother's Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mother's Name:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/motherNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Parent's Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Father's Name:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/fatherNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Parent's phone number-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parent's Phone Number:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/phoneNoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Parent's email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parent's Email:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/emailAddEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+            <!-- Editable Text: Address-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:  "
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/addressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!--So that bottom TextView not hidden-->
+            <View android:layout_width="match_parent"
+                android:layout_height="32dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/information_layout"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/editBabyProfileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Save Updates" />
+    </LinearLayout>
+
+</RelativeLayout>

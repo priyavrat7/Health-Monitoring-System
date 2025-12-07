@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="32dp"
+    tools:context=".ParentTempActivity">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/baby_icon"
+        android:src="@drawable/baby_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/title"
+        android:gravity="center"
+        android:layout_alignBottom="@id/baby_icon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/dark_grey"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/period_upload_layout"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Period: "
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/upload_period_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/time_unit_upload_period_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:entries="@array/time_units"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keep_data_layout"
+        android:layout_below="@id/period_upload_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep data of last : "
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/keep_data_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/time_unit_keep_data_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:entries="@array/time_units"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_accLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/keep_data_layout">
+        <TextView
+            android:id="@+id/accX"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/accY"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/accZ"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/temp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_accLayout"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tempView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/temp_chart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temp_layout"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/temp_chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/temp_chart_layout">
+
+        <Button
+            android:id="@+id/startRecordingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Recording"
+            android:backgroundTint="@color/green"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:id="@+id/scanConnectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect another BLE Device"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
